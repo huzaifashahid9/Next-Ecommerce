@@ -47,7 +47,7 @@ export async function POST(request) {
     await sendEmail(
       "Email Verification request from Team Huzaifa ",
       email,
-      // emailVerificationLink(`${process.env.NEXT_PUBLIC_BASE_URL}/api/auth/verify-email?token=${token}`, name)
+
       emailVerificationLink(
         `${process.env.NEXT_PUBLIC_BASE_URL}/auth/verify-email/${token}`
       )
